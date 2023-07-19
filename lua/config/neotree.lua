@@ -34,7 +34,20 @@ require("neo-tree").setup({
 				vim.cmd("highlight Cursor blend=0")
 			end,
 		},
-	},
+        {
+			event = events.NEO_TREE_POPUP_BUFFER_LEAVE,
+			handler = function()
+				vim.cmd("stopinsert")
+                vim.cmd("highlight Cursor blend=100")
+			end,
+		},
+		{
+			event = events.NEO_TREE_POPUP_BUFFER_ENTER,
+			handler = function()
+				vim.cmd("highlight Cursor blend=0")
+			end,
+		},
+    },
 	default_component_configs = {
 		container = {
 			enable_character_fade = true,
@@ -183,7 +196,7 @@ require("neo-tree").setup({
 		-- "open_current",  -- netrw disabled, opening a directory opens within the
 		-- window like netrw would, regardless of window.position
 		-- "disabled",    -- netrw left alone, neo-tree does not handle opening dirs
-		use_libuv_file_watcher = false, -- This will use the OS level file watchers to detect changes
+		use_libuv_file_watcher = true, -- This will use the OS level file watchers to detect changes
 		-- instead of relying on nvim autocmd events.
 		window = {
 			mappings = {

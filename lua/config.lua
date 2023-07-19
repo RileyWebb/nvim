@@ -5,6 +5,7 @@ vim.cmd([[ set guicursor+=a:Cursor/lCursor ]])
 
 vim.opt.showmatch = true --
 vim.opt.ignorecase = true
+vim.opt.smartcase = true
 vim.opt.mouse = "a" -- Mouse support
 vim.opt.hlsearch = true
 vim.opt.incsearch = true

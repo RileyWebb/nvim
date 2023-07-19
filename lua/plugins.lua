@@ -82,6 +82,7 @@ vim.g.mapleader = require("lazy").setup({
 
 	-- Utilities
 	{ "dstein64/vim-startuptime" },
+    { 'tpope/vim-fugitive' },
 
 	-- Colorschemes
 	{ "AlphaTechnolog/pywal.nvim", as = "pywal" },
