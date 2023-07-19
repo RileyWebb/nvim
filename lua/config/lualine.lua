@@ -1,11 +1,7 @@
-vim.cmd([[highlight StatusLine   cterm=none ctermfg=white ctermbg=black guibg=red]])
-vim.cmd([[highlight StatusLineNC cterm=none ctermfg=white ctermbg=black guibg=green]])
-
 require("lualine").setup({
 	options = {
 		icons_enabled = true,
-		theme = "pywal-nvim",
-		--theme = 'lushwal',
+		--theme = "pywal-nvim",
 		component_separators = { left = "", right = "" },
 		section_separators = { left = "", right = "" },
 		disabled_filetypes = {
