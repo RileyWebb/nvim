@@ -86,4 +86,5 @@ vim.g.mapleader = require("lazy").setup({
 
 	-- Colorschemes
 	{ "AlphaTechnolog/pywal.nvim", as = "pywal" },
+	{ "catppuccin/nvim", name = "catppuccin" },
 })
